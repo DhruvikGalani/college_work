@@ -86,7 +86,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style3" colspan="2">
+                    <td class="auto-style3" colspan="2" style="text-align: center; vertical-align: middle; white-space: pre-wrap;">
                         <asp:Button ID="btnSubmit" runat="server" Text="Submit" />
                         <asp:Button ID="btnReset" runat="server" Text="Reset" />
                     </td>
