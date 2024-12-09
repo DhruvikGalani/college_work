@@ -20,6 +20,9 @@
             height: 26px;
             width: 223px;
         }
+        .auto-style6 {
+            height: 24px;
+        }
     </style>
 </head>
 <body style="">
@@ -92,7 +95,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style3" colspan="2">&nbsp;</td>
+                    <td class="auto-style6" colspan="2">Details : </td>
                 </tr>
             </table>
         </div>
