@@ -98,7 +98,7 @@
                     </tr>
                 <tr>
                     <td class="auto-style6" colspan="2">&nbsp;<asp:Label ID="lblDetails" runat="server" Text="Details :"></asp:Label>
-                    </td>
+                    &nbsp;d</td>
                 </tr>
             </table>
         </div>
