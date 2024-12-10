@@ -18,5 +18,11 @@ namespace college_work
         {
 
         }
+
+        protected System.Void btnSubmit_Click(System.Object sender, System.EventArgs e)
+        {
+            string name= txtName.Text;
+            lblDetails.Text +="<br> name: " + name;
+        }
     }
 }
