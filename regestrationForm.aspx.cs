@@ -14,19 +14,19 @@ namespace college_work
 
         }
 
-        //protected System.Void Page_Load(System.Object sender, System.EventArgs e)
-        //{
-
-        //}
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
 
+            string name = txtName.Text;
+            lblDetails.Text += "<br> name: " + name;
         }
 
         protected void btnReset_Click(object sender, EventArgs e)
         {
 
         }
+
+       
     }
 }
