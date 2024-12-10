@@ -18,8 +18,9 @@ namespace college_work
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             string name = txtName.Text;
+         
             string address = txtAddress.Text; 
-            lblDetails.Text += "<br> name: " + name;
+            lblDetails.Text += "<br> name: " + name + "</br> Address : "+ txtAddress.Text; ;
         }
 
         protected void btnReset_Click(object sender, EventArgs e)
