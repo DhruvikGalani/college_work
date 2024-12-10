@@ -19,7 +19,7 @@ namespace college_work
         {
             string name = txtName.Text;
             string dob = txtDob.Text;
-            string address = txtAddress.Text; 
+            string address = txtAddress.Text;
             lblDetails.Text += "<br> name: " + name + "</br> Address : "+ address + "</br> Dob : " + dob;
         }
 
