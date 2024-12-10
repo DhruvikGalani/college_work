@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="regestrationForm.aspx.cs" Inherits="college_work.regestrationForm" %>
+﻿
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="regestrationForm.aspx.cs" Inherits="college_work.regestrationForm" %>
 
 <!DOCTYPE html>
 
@@ -90,12 +91,13 @@
                 </tr>
                 <tr>
                     <td class="auto-style3" colspan="2" style="text-align: center; vertical-align: middle; white-space: pre-wrap;">
-                        <asp:Button ID="btnSubmit" runat="server" Text="Submit" />
-                        <asp:Button ID="btnReset" runat="server" Text="Reset" />
+                        <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
+                        <asp:Button ID="btnReset" runat="server" Text="Reset" OnClick="btnReset_Click" />
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style6" colspan="2">Details : </td>
+                    <td class="auto-style6" colspan="2">&nbsp;<asp:Label ID="lblDetails" runat="server" Text="Details :"></asp:Label>
+                    </td>
                 </tr>
             </table>
         </div>

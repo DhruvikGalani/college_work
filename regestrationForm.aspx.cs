@@ -14,7 +14,17 @@ namespace college_work
 
         }
 
-        protected System.Void Page_Load(System.Object sender, System.EventArgs e)
+        //protected System.Void Page_Load(System.Object sender, System.EventArgs e)
+        //{
+
+        //}
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnReset_Click(object sender, EventArgs e)
         {
 
         }
