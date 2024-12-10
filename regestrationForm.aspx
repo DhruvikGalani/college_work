@@ -72,7 +72,7 @@
                             <asp:ListItem>surat</asp:ListItem>
                             <asp:ListItem>tapi</asp:ListItem>
                             <asp:ListItem>bhavanagar</asp:ListItem>
-                            <asp:ListItem>ahemedabad</asp:ListItem>
+                            <asp:ListItem>ahmedabad</asp:ListItem>
                         </asp:DropDownList>
                     </td>
                 </tr>
