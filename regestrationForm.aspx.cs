@@ -17,15 +17,44 @@ namespace college_work
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            string name = txtName.Text;
-            string dob = txtDob.Text;
-            string address = txtAddress.Text;
-            lblDetails.Text += "<br> name: " + name + "</br> Address : "+ address + "</br> Dob : " + dob;
+            try
+            {
+                string name = txtName.Text;
+                string gender = rblGender.SelectedValue;
+                string dob = txtDob.Text;
+                string social = string.Empty;
+                string city = ddlCity.SelectedValue;
+                string address = txtAddress.Text;
+
+                for (int i = 0; i < cblSocialMedia.Items.Count; i++)
+                {
+                    if (cblSocialMedia.Items[i].Selected)
+                    {
+                        social += cblSocialMedia.Items[i].Value + ", ";
+                    }
+                }
+
+                lblDetails.Text += "<br> name: " + name +
+                    "</br> gender : " + gender +
+                    "</br> DOB : " + dob +
+                    "</br> socail media : " + social +
+                    "</br> city : " + city +
+                    "</br> Address : " + address;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         protected void btnReset_Click(object sender, EventArgs e)
         {
-
+           txtName.Text = "";
+      
+           txtDob.Text = "";        
+           ddlCity.SelectedValue = "";
+           txtAddress.Text = "";
         }
 
        
