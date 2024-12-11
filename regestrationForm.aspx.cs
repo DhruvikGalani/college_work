@@ -17,6 +17,7 @@ namespace college_work
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
+            lblDetails.Text = "";
             try
             {
                 string name = txtName.Text;
@@ -34,7 +35,7 @@ namespace college_work
                     }
                 }
 
-                lblDetails.Text += "<br> name: " + name +
+                lblDetails.Text = "<br> name: " + name +
                     "</br> gender : " + gender +
                     "</br> DOB : " + dob +
                     "</br> socail media : " + social +
@@ -46,15 +47,24 @@ namespace college_work
 
                 throw;
             }
+            txtName.Text = "";
+            rblGender.ClearSelection();
+            txtDob.Text = "";
+            ddlCity.ClearSelection();
+            cblSocialMedia.ClearSelection();
+            txtAddress.Text = "";
+
         }
 
         protected void btnReset_Click(object sender, EventArgs e)
         {
            txtName.Text = "";
-      
+           rblGender.ClearSelection();
            txtDob.Text = "";        
-           ddlCity.SelectedValue = "";
+           ddlCity.ClearSelection();
+           cblSocialMedia.ClearSelection();
            txtAddress.Text = "";
+            lblDetails.Text = "";
         }
 
        
