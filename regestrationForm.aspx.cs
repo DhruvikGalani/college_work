@@ -17,27 +17,43 @@ namespace college_work
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            string name = txtName.Text;
-            string gender = rblGender.SelectedValue;
-            string dob = txtDob.Text;
-            string city = ddlCity.SelectedValue;
-            string address = txtAddress.Text;
-            string smedia = cblSocialMedia.SelectedValue;
-
-            for (int i = 0; i < cblSocialMedia.Items.Count; i++)
+            lblDetails.Text = "";
+            try
             {
-                if (cblSocialMedia.Items[i].Selected)
-                {
-                    smedia = cblSocialMedia.Items[i].Value; 
-                }
-            }
+                string name = txtName.Text;
+                string gender = rblGender.SelectedValue;
+                string dob = txtDob.Text;
+                string social = string.Empty;
+                string city = ddlCity.SelectedValue;
+                string address = txtAddress.Text;
 
-            lblDetails.Text += "<br> name: " + name +
-                "</br> gender : " + gender + 
-                "</br> Dob : " + dob +
-                "</br> Social media : " + smedia +
-                "</br> city : " + city +
-                "</br> Address : " + address;
+                for (int i = 0; i < cblSocialMedia.Items.Count; i++)
+                {
+                    if (cblSocialMedia.Items[i].Selected)
+                    {
+                        social += cblSocialMedia.Items[i].Value + ", ";
+                    }
+                }
+
+                lblDetails.Text = "<br> name: " + name +
+                    "</br> gender : " + gender +
+                    "</br> DOB : " + dob +
+                    "</br> socail media : " + social +
+                    "</br> city : " + city +
+                    "</br> Address : " + address;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            txtName.Text = "";
+            rblGender.ClearSelection();
+            txtDob.Text = "";
+            ddlCity.ClearSelection();
+            cblSocialMedia.ClearSelection();
+            txtAddress.Text = "";
+
         }
 
         protected void btnReset_Click(object sender, EventArgs e)
@@ -48,8 +64,16 @@ namespace college_work
             cblSocialMedia.SelectedValue = string.Empty;
             ddlCity.SelectedValue = string.Empty;
             txtAddress.Text = string.Empty;
+
+            txtName.Text = "";
+            rblGender.ClearSelection();
+            txtDob.Text = "";
+            ddlCity.ClearSelection();
+            cblSocialMedia.ClearSelection();
+            txtAddress.Text = "";
+            lblDetails.Text = "";
         }
 
-       
+
     }
 }
