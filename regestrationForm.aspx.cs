@@ -48,13 +48,7 @@ namespace college_work
 
                 throw;
             }
-            txtName.Text = "";
-            rblGender.ClearSelection();
-            txtDob.Text = "";
-            ddlCity.ClearSelection();
-            cblSocialMedia.ClearSelection();
-            txtAddress.Text = "";
-
+            
 
         }
 
