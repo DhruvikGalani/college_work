@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,6 +17,7 @@ namespace college_work
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
+
             lblDetails.Text = "";
             try
             {
@@ -54,10 +55,12 @@ namespace college_work
             cblSocialMedia.ClearSelection();
             txtAddress.Text = "";
 
+
         }
 
         protected void btnReset_Click(object sender, EventArgs e)
         {
+
            txtName.Text = "";
            rblGender.ClearSelection();
            txtDob.Text = "";        
@@ -65,6 +68,7 @@ namespace college_work
            cblSocialMedia.ClearSelection();
            txtAddress.Text = "";
             lblDetails.Text = "";
+
         }
 
        
