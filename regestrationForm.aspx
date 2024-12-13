@@ -80,12 +80,9 @@
                 <tr>
                     <td class="auto-style11">City : </td>
                     <td class="auto-style8">
-                        <asp:DropDownList ID="ddlCity" runat="server">
-                            <asp:ListItem>select</asp:ListItem>
-                            <asp:ListItem>surat</asp:ListItem>
-                            <asp:ListItem>tapi</asp:ListItem>
-                            <asp:ListItem>bhavanagar</asp:ListItem>
-                            <asp:ListItem>ahmedabad</asp:ListItem>
+                        <asp:DropDownList ID="ddlstate" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlstate_SelectedIndexChanged">
+                        </asp:DropDownList>
+                        <asp:DropDownList ID="ddlCity" runat="server" AutoPostBack="True">
                         </asp:DropDownList>
                     </td>
                 </tr>
