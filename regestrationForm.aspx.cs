@@ -11,7 +11,10 @@ namespace college_work
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!Page.IsPostBack)
+            {
+                fnbindstate();
+            }
         }
 
 
@@ -25,6 +28,7 @@ namespace college_work
                 string gender = rblGender.SelectedValue;
                 string dob = txtDob.Text;
                 string social = string.Empty;
+                string state = ddlstate.SelectedValue;
                 string city = ddlCity.SelectedValue;
                 string address = txtAddress.Text;
 
@@ -40,6 +44,7 @@ namespace college_work
                     "</br> gender : " + gender +
                     "</br> DOB : " + dob +
                     "</br> socail media : " + social +
+                    "</br> state : " + state +
                     "</br> city : " + city +
                     "</br> Address : " + address;
             }
@@ -48,7 +53,14 @@ namespace college_work
 
                 throw;
             }
-            
+
+            txtName.Text = "";
+            rblGender.ClearSelection();
+            txtDob.Text = "";
+            ddlstate.ClearSelection();
+            ddlCity.ClearSelection();
+            cblSocialMedia.ClearSelection();
+            txtAddress.Text = "";
 
         }
 
@@ -57,14 +69,43 @@ namespace college_work
 
            txtName.Text = "";
            rblGender.ClearSelection();
-           txtDob.Text = "";        
-           ddlCity.ClearSelection();
+           txtDob.Text = "";
+            ddlstate.ClearSelection();
+            ddlCity.ClearSelection();
            cblSocialMedia.ClearSelection();
            txtAddress.Text = "";
             lblDetails.Text = "";
 
         }
 
-       
+        protected void fnbindstate()
+        {
+            ddlstate.Items.Add("gujrat");
+            ddlstate.Items.Add("mumbai");
+            ddlstate.Items.Insert(0, new ListItem("---Select State---"));
+        }
+
+        protected void fnbindcity()
+        {
+            ddlCity.Items.Clear();
+            if (ddlstate.SelectedValue=="gujrat")
+            {
+                ddlCity.Items.Add("surat");
+                ddlCity.Items.Add("vapi");
+                ddlCity.Items.Add("rajkot");
+            }
+            else if (ddlstate.SelectedValue == "mumbai")
+            {
+                ddlCity.Items.Add("thane");
+                ddlCity.Items.Add("pune");
+            }
+            ddlCity.Items.Insert(0, new ListItem("---select city---"));
+        }
+
+        protected void ddlstate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            fnbindcity();
+        }
     }
 }
