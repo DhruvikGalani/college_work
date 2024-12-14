@@ -81,7 +81,7 @@ namespace college_work
         protected void fnbindstate()
         {
             ddlState.Items.Add("gujrat");
-            ddlState.Items.Add("mumbai");
+            ddlState.Items.Add("maharastra");
             ddlState.Items.Insert(0, new ListItem("---Select State---"));
         }      
 
@@ -94,9 +94,10 @@ namespace college_work
                 ddlCity.Items.Add("vapi");
                 ddlCity.Items.Add("rajkot");
             }
-            else if (ddlState.SelectedValue == "mumbai")
+            else if (ddlState.SelectedValue == "maharastra")
             {
                 ddlCity.Items.Add("thane");
+                ddlCity.Items.Add("mumbai");
                 ddlCity.Items.Add("pune");
             }
             ddlCity.Items.Insert(0, new ListItem("---select city---"));
