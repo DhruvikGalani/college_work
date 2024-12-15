@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,12 +11,16 @@ namespace college_work
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!Page.IsPostBack)
+            {
+                fnbindstate();
+            }
         }
 
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
+
             lblDetails.Text = "";
             try
             {
@@ -24,6 +28,7 @@ namespace college_work
                 string gender = rblGender.SelectedValue;
                 string dob = txtDob.Text;
                 string social = string.Empty;
+                string state = ddlState.SelectedValue;
                 string city = ddlCity.SelectedValue;
                 string address = txtAddress.Text;
 
@@ -39,6 +44,7 @@ namespace college_work
                     "</br> gender : " + gender +
                     "</br> DOB : " + dob +
                     "</br> socail media : " + social +
+                    "</br> state : " + state +
                     "</br> city : " + city +
                     "</br> Address : " + address;
             }
@@ -47,9 +53,11 @@ namespace college_work
 
                 throw;
             }
+
             txtName.Text = "";
             rblGender.ClearSelection();
             txtDob.Text = "";
+            ddlState.ClearSelection();
             ddlCity.ClearSelection();
             cblSocialMedia.ClearSelection();
             txtAddress.Text = "";
@@ -58,22 +66,47 @@ namespace college_work
 
         protected void btnReset_Click(object sender, EventArgs e)
         {
-            txtName.Text = string.Empty;
-            rblGender.Text = string.Empty;
-            txtDob.Text = string.Empty;
-            cblSocialMedia.SelectedValue = string.Empty;
-            ddlCity.SelectedValue = string.Empty;
-            txtAddress.Text = string.Empty;
 
-            txtName.Text = "";
-            rblGender.ClearSelection();
-            txtDob.Text = "";
+           txtName.Text = "";
+           rblGender.ClearSelection();
+           txtDob.Text = "";
+            ddlState.ClearSelection();
             ddlCity.ClearSelection();
-            cblSocialMedia.ClearSelection();
-            txtAddress.Text = "";
+           cblSocialMedia.ClearSelection();
+           txtAddress.Text = "";
             lblDetails.Text = "";
+
         }
 
+        protected void fnbindstate()
+        {
+            ddlState.Items.Add("gujrat");
+            ddlState.Items.Add("maharastra");
+            ddlState.Items.Insert(0, new ListItem("---Select State---"));
+        }      
 
+        protected void fnbindcity()
+        {
+            ddlCity.Items.Clear();
+            if (ddlState.SelectedValue=="gujrat")
+            {
+                ddlCity.Items.Add("surat");
+                ddlCity.Items.Add("vapi");
+                ddlCity.Items.Add("rajkot");
+            }
+            else if (ddlState.SelectedValue == "maharastra")
+            {
+                ddlCity.Items.Add("thane");
+                ddlCity.Items.Add("mumbai");
+                ddlCity.Items.Add("pune");
+            }
+            ddlCity.Items.Insert(0, new ListItem("---select city---"));
+        }
+
+        protected void ddlstate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            fnbindcity();
+        }
     }
 }
