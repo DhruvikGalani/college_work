@@ -80,7 +80,7 @@
                 <tr>
                     <td class="auto-style11">City : </td>
                     <td class="auto-style8">
-                        <asp:DropDownList ID="ddlstate" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlstate_SelectedIndexChanged">
+                        <asp:DropDownList ID="ddlState" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlstate_SelectedIndexChanged">
                         </asp:DropDownList>
                         <asp:DropDownList ID="ddlCity" runat="server" AutoPostBack="True">
                         </asp:DropDownList>
