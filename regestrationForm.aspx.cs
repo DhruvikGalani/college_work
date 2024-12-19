@@ -49,9 +49,9 @@ namespace college_work
                     "</br> city : " + city +
                     "</br> Address : " + address;
             }
-            catch (Exception)
+            catch (Exception SaveError)
             {
-
+                Response.Write(SaveError.ToString());
                 throw;
             }
 
