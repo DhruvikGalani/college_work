@@ -55,14 +55,7 @@ namespace college_work
                 throw;
             }
 
-            txtName.Text = "";
-            rblGender.ClearSelection();
-            txtDob.Text = "";
-            ddlState.ClearSelection();
-            ddlCity.ClearSelection();
-            cblSocialMedia.ClearSelection();
-            txtAddress.Text = "";
-
+       
         }
 
         protected void btnReset_Click(object sender, EventArgs e)
@@ -71,11 +64,11 @@ namespace college_work
            txtName.Text = "";
            rblGender.ClearSelection();
            txtDob.Text = "";
-            ddlState.ClearSelection();
-            ddlCity.ClearSelection();
+           ddlState.ClearSelection();
+           ddlCity.ClearSelection();
            cblSocialMedia.ClearSelection();
            txtAddress.Text = "";
-            lblDetails.Text = "";
+           lblDetails.Text = "";
 
         }
 
