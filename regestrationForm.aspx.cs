@@ -74,7 +74,9 @@ namespace college_work
             ddlCity.ClearSelection();
            cblSocialMedia.ClearSelection();
            txtAddress.Text = "";
-            lblDetails.Text = "";
+            
+
+
 
         }
 
