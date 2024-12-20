@@ -23,9 +23,9 @@
         <div>
             <table cellpadding="3" cellspacing="4" class="auto-style1">
                 <tr>
-                    <td class="auto-style3">User Id :</td>
+                    <td class="auto-style3">User Name :</td>
                     <td>
-                        <asp:TextBox ID="txtId" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
