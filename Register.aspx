@@ -40,7 +40,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2" colspan="2" style="text-align: center">
+                    <td class="auto-style2" colspan="2">
                         <asp:Label ID="lblDetails" runat="server" Text="Details :"></asp:Label>
                     </td>
                 </tr>
