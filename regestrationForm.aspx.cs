@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
 namespace college_work
 {
     public partial class regestrationForm : System.Web.UI.Page
@@ -48,20 +49,13 @@ namespace college_work
                     "</br> city : " + city +
                     "</br> Address : " + address;
             }
-            catch (Exception)
+            catch (Exception SaveError)
             {
-
+                Response.Write(SaveError.ToString());
                 throw;
             }
 
-            txtName.Text = "";
-            rblGender.ClearSelection();
-            txtDob.Text = "";
-            ddlState.ClearSelection();
-            ddlCity.ClearSelection();
-            cblSocialMedia.ClearSelection();
-            txtAddress.Text = "";
-
+       
         }
 
         protected void btnReset_Click(object sender, EventArgs e)
@@ -70,13 +64,11 @@ namespace college_work
            txtName.Text = "";
            rblGender.ClearSelection();
            txtDob.Text = "";
-            ddlState.ClearSelection();
-            ddlCity.ClearSelection();
+           ddlState.ClearSelection();
+           ddlCity.ClearSelection();
            cblSocialMedia.ClearSelection();
            txtAddress.Text = "";
-            
-
-
+           lblDetails.Text = "";
 
         }
 

@@ -23,9 +23,9 @@
         <div>
             <table cellpadding="3" cellspacing="4" class="auto-style1">
                 <tr>
-                    <td class="auto-style3">User Id :</td>
+                    <td class="auto-style3">User Name :</td>
                     <td>
-                        <asp:TextBox ID="txtId" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -40,7 +40,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2" colspan="2" style="text-align: center">
+                    <td class="auto-style2" colspan="2">
                         <asp:Label ID="lblDetails" runat="server" Text="Details :"></asp:Label>
                     </td>
                 </tr>
