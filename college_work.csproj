@@ -72,11 +72,19 @@
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <Content Include="Dept &amp; Course\show_Dept.aspx" />
     <Content Include="regestrationForm.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dept &amp; Course\show_Dept.aspx.cs">
+      <DependentUpon>show_Dept.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dept &amp; Course\show_Dept.aspx.designer.cs">
+      <DependentUpon>show_Dept.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="regestrationForm.aspx.cs">
       <DependentUpon>regestrationForm.aspx</DependentUpon>
