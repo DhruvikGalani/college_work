@@ -42,37 +42,37 @@ namespace college_work.Dept___Course
 
         protected void BindGridViewDept() 
         {
-            SqlConnection conn = new SqlConnection(strconn);
+            SqlConnection con = new SqlConnection(strconn);
             string query = "select * from Tbl_dept";
-            conn.Open();
-            SqlDataAdapter sda = new SqlDataAdapter(query,conn);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(query,con);
             DataSet ds = new DataSet();
             sda.Fill(ds);
 
             gvDataDept.DataSource = ds;
             gvDataDept.DataBind();
-            conn.Close();
+            con.Close();
         }
         protected void BindGridViewCourse() 
         {
-            SqlConnection conn = new SqlConnection(strconn);
+            SqlConnection con = new SqlConnection(strconn);
             string query = "select * from Tbl_course";
-            conn.Open();
-            SqlDataAdapter sda = new SqlDataAdapter(query,conn);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(query,con);
             DataSet ds = new DataSet();
             sda.Fill(ds);
 
             gvDataCourse.DataSource = ds;
             gvDataCourse.DataBind();
-            conn.Close();
+            con.Close();
         }
 
         protected void BindDDL() 
         {
-            SqlConnection conn = new SqlConnection(strconn);
-            conn.Open();
+            SqlConnection con = new SqlConnection(strconn);
+            con.Open();
             string query = "select * from Tbl_dept";
-            SqlDataAdapter adpt = new SqlDataAdapter(query,conn);
+            SqlDataAdapter adpt = new SqlDataAdapter(query,con);
             DataTable dataTable = new DataTable();
             adpt.Fill(dataTable);
             ddlDept.DataSource = dataTable;
@@ -80,14 +80,14 @@ namespace college_work.Dept___Course
             ddlDept.DataTextField = "dept_name";
             ddlDept.DataTextField = "dept_id";
             ddlDept.DataBind();
-            conn.Close();
+            con.Close();
 
         }
         protected void ddlDept_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(strconn);
-            conn.Open();
-            SqlCommand cmd = new SqlCommand("select * from Tbl_course where dept_id = @deptID",conn);
+            SqlConnection con = new SqlConnection(strconn);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from Tbl_course where dept_id = @deptID",con);
             cmd.Parameters.AddWithValue("deptID", ddlDept.SelectedValue);
             ddlCourse.DataSource = cmd.ExecuteReader();
             ddlCourse.DataTextField = "course_name";
